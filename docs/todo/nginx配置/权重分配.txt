@@ -1,0 +1,8 @@
+upstream jt { 
+	
+		server localhost:8081 weight=8; 
+		server localhost:8082 weight=2;
+		server localhost:8083 down;
+	}
+对于上图的配置，第一个weight=8,第二个weight=2,总数是10。
+即第一个tomcat负载80%的请求，第二个tomcat负载20%的请求

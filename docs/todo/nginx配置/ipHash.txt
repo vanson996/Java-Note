@@ -1,0 +1,7 @@
+upstream jt-list{
+		ip_hash;
+		server 127.0.0.1:8091 weight=8;
+		server 127.0.0.1:8092 backup;
+		server 127.0.0.1:8093 down;
+}
+backup 表示如果配置的服务器都忙时，才启用backup机器
